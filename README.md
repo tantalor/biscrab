@@ -12,3 +12,4 @@ Pass in an "html" parameter to produce HTML output with [Cheetah](http://cheetah
 
     egrep "^.{2,6}$" /usr/share/dict/words | python biscrab.py html > biscrab.html
 
+![Example output](://github.com/tantalor/biscrab/raw/master/example.png)
