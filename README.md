@@ -8,6 +8,10 @@ The corpus of words are accepted as standard input to `biscrab.py`. The default 
 
 Pass in an "html" parameter to produce HTML output with [Cheetah](http://cheetahtemplate.org/).
 
+# motivation
+
+I was wondering whether I could improve my Scrabble strategy by first identifying the letters in my rack with the greatest potential to make high-scoring words. This could be done by considering all the pairs of letters, and picking the pairs that most frequently appear in high-scoring words. These pairs might help me quickly narrow down the best possible words in my rack.
+
 # example
 
     egrep "^.{2,6}$" /usr/share/dict/words | python biscrab.py html > biscrab.html
