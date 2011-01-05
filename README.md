@@ -12,4 +12,6 @@ Pass in an "html" parameter to produce HTML output with [Cheetah](http://cheetah
 
     egrep "^.{2,6}$" /usr/share/dict/words | python biscrab.py html > biscrab.html
 
+In the HTML rendering, lighter colors are better pairs. The best pairs here are `(e,r)` and `(a,e)`. I used words in `/usr/share/dict/words` between 2 and 6 letters as my corpus.
+
 ![Example output](https://github.com/tantalor/biscrab/raw/master/example.png)
