@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css" media="screen">
+  table {
+    border-collapse:collapse;
+  }
+  td {
+    width: 1em;
+    height: 1em;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<table>
+<tr>
+  <td></td>
+  #for $a in $letters
+    <td>$a</td>
+  #end for
+</tr>
+#for $a in $letters
+  <tr>
+    <td>$a</td>
+    #for $b in $letters
+      #if ($a,$b) in $combos:
+        <td style="
+          color:
+            #if $combos[($a,$b)] < .3:
+              white;
+            #else:
+              black;
+            #end if
+          background-color:hsl(0,0%,$int(100*$combos[($a,$b)])%)
+        ">$b</td>
+      #else
+        <td></td>
+      #end if
+    #end for
+  </tr>
+#end for
+</table>
+</body>
+</html>
